@@ -4,10 +4,10 @@
 
 | Tệp | Nội dung | Cách tái lập |
 |---|---|---|
-| [top-view.png](./screenshots/top-view.png) | Đầu trang: nhận diện, hero, kỹ năng và đầu lưới dự án (PNG 1440 × 900) | Mở bản cục bộ ở cửa sổ desktop, cuộn lên đầu |
-| [projects.png](./screenshots/projects.png) | Khu vực bốn thẻ dự án (PNG 1581 × 1301) | Chụp riêng section `#projects` |
-| [contact.png](./screenshots/contact.png) | Email và GitHub hiện hành (PNG 1076 × 324) | Chụp riêng section `#contact` |
-| [mobile.png](./screenshots/mobile.png) | Điều hướng và hero ở viewport hẹp (PNG 390 × 844) | Chụp Edge headless với cửa sổ 390 × 844 |
+| [top-view.png](./screenshots/top-view.png) | Đầu trang: nhận diện, hero, kỹ năng và đầu lưới dự án (PNG 1440 × 900) | Chụp Edge headless tại viewport 1440 × 900 |
+| [projects.png](./screenshots/projects.png) | Khu vực bốn thẻ dự án (PNG 1440 × 1040) | Cắt section `#projects` từ ảnh Edge headless |
+| [contact.png](./screenshots/contact.png) | Email, GitHub và biểu mẫu liên hệ (PNG 1440 × 840) | Cắt section `#contact` từ ảnh Edge headless |
+| [mobile.png](./screenshots/mobile.png) | Điều hướng và hero ở viewport hẹp (PNG 390 × 844) | Chụp Edge headless tại viewport 390 × 844 |
 
 Ảnh là ảnh chụp trình duyệt của bản cục bộ; không chứng minh trạng thái GitHub Pages. Kích thước bảng là kích thước tệp PNG, không thay thế số đo CSS viewport trong báo cáo kiểm thử. Chụp lại nếu HTML/CSS thay đổi đáng kể hoặc nếu ảnh không còn đồng bộ với phiên bản đang kiểm thử.
 

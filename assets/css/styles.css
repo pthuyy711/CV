@@ -12,11 +12,11 @@
    ========================================================================== */
 :root {
   /* --- Bảng màu --- */
-  --color-primary: #7c3aed;      /* tím thương hiệu */
-  --color-primary-dark: #6d28d9;
-  --color-accent: #9333ea;
-  --color-text: #1e293b;         /* chữ chính */
-  --color-text-soft: #64748b;    /* chữ phụ */
+  --color-primary: #6d28d9;      /* tím thương hiệu */
+  --color-primary-dark: #5b21b6;
+  --color-accent: #7e22ce;
+  --color-text: #2e1065;         /* chữ chính */
+  --color-text-soft: #5b4b78;    /* chữ phụ */
   --color-bg: #faf5ff;           /* nền tím nhạt */
   --color-surface: #f3e8ff;      /* nền vùng nhấn */
   --color-border: #e2e8f0;       /* viền */
@@ -452,4 +452,51 @@ ul {
     transition: none !important;
     scroll-behavior: auto !important;
   }
+}
+/* FORM LIÊN HỆ */
+.contact-form {
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #8064d9;
+  box-shadow: 0 0 5px rgba(128, 100, 217, 0.3);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  width: fit-content;
 }
