@@ -1,169 +1,91 @@
-# Portfolio CV - Nguyễn Văn An
+# Portfolio CV - Phạm Thị Phương Thúy
 
-## 1. Giới thiệu
+Website portfolio CV tĩnh, xây dựng bằng HTML5 và CSS3, giới thiệu bản thân, kỹ năng, dự án và thông tin liên hệ. Giao diện dùng Flexbox, CSS Grid và thiết kế mobile-first.
 
-Portfolio CV cá nhân dành cho Frontend Developer, được xây dựng dưới dạng website tĩnh. Trang giới thiệu thông tin cá nhân, kỹ năng, các dự án tiêu biểu và phương thức liên hệ; bố cục hỗ trợ màn hình điện thoại, máy tính bảng và máy tính.
+## Trạng thái bàn giao
 
-## 2. Chức năng
+- **Mã nguồn trong thư mục này:** đã cập nhật nội dung, giao diện tím nhạt và tài liệu theo các tiêu chí bàn giao.
+- **Kiểm thử responsive:** đã đo ở viewport 360, 375, 768, 1024 và 1280 CSS px bằng Chromium tích hợp.
+- **GitHub Pages:** workflow GitHub Actions triển khai trang khi có thay đổi trên nhánh `main`. Sau khi đẩy mã nguồn, cần kiểm tra workflow và xác minh URL công khai.
 
-- Hiển thị phần giới thiệu và ảnh đại diện.
-- 
-- Hiển thị các dự án mẫu cùng mô tả và công nghệ sử dụng.
-- Điều hướng nhanh tới các phần Giới thiệu, Kỹ năng, Dự án và Liên hệ.
-- Cung cấp liên kết email, GitHub và LinkedIn.
-- Bố cục responsive, dùng Flexbox và CSS Grid.
+## Tính năng và cấu trúc
 
-## 3. Công nghệ
+- Các phần Giới thiệu, Kỹ năng, Dự án, Liên hệ và điều hướng nội trang.
+- HTML ngữ nghĩa với `header`, `nav`, `main`, `section`, `article`, `figure` và `footer`.
+- CSS được tách khỏi HTML; design token tập trung trong `:root`.
+- Bố cục mobile-first: dự án 1 cột, từ 768px 2 cột, từ 1280px 3 cột.
+- Hỗ trợ focus bàn phím, văn bản thay thế cho ảnh và tùy chọn giảm chuyển động.
+- Không cần Node.js, npm, cơ sở dữ liệu hay thư viện phía trình duyệt.
 
-- HTML5: cấu trúc nội dung và các phần tử ngữ nghĩa.
-- CSS3: giao diện, responsive, Flexbox và CSS Grid.
-- Nginx (tùy chọn): phục vụ website khi chạy bằng Docker.
-
-Dự án không cần Node.js, npm, cơ sở dữ liệu hoặc thư viện bên ngoài để chạy.
-
-## 4. Yêu cầu môi trường
-
-- Trình duyệt hiện đại như Chrome, Firefox, Edge hoặc Safari.
-- Để chạy bằng máy chủ cục bộ: Python 3 (hoặc một máy chủ HTTP tĩnh tương đương).
-- Để chạy bằng Docker: Docker Engine hoặc Docker Desktop đang hoạt động.
-- Mã nguồn và tài nguyên ảnh nằm đúng cấu trúc thư mục của dự án.
-
-## 5. Cấu trúc dự án
+## Cấu trúc thư mục
 
 ```text
 CV-main/
 ├── index.html
 ├── README.md
-└── assets/
-	├── css/
-	│   └── styles.css
-	└── img/
-		└── avatar.jpg
+├── CHANGELOG.md
+├── BAOCAO-A2.1.docx
+├── AI_LOG.md
+├── docs/
+│   ├── DESIGN_REPORT.md
+│   ├── DEMO_SCRIPT.md
+│   ├── EVIDENCE_INDEX.md
+│   ├── test_report.md
+│   └── screenshots/
+├── assets/
+│   ├── css/styles.css
+│   └── img/avatar.jpg
+└── .github/workflows/pages.yml
 ```
 
-## 6. Cài đặt
+## Chạy cục bộ
 
-### Windows
+Yêu cầu: trình duyệt hiện đại. Có thể mở `index.html` trực tiếp; khuyến nghị dùng máy chủ HTTP tĩnh.
 
-1. Tải hoặc clone mã nguồn về máy.
-2. Mở PowerShell trong thư mục dự án, nơi có tệp `index.html`.
-3. Nếu dùng Python, kiểm tra cài đặt:
-
-```powershell
-py --version
-```
-
-Nếu lệnh `py` không có, thử `python --version`. Cài Python 3 nếu cả hai lệnh đều không hoạt động.
-
-### macOS
-
-1. Tải hoặc clone mã nguồn về máy.
-2. Mở Terminal và chuyển tới thư mục dự án.
-3. Kiểm tra Python 3:
-
-```bash
-python3 --version
-```
-
-Cài Python 3 nếu máy chưa có.
-
-### Linux
-
-1. Tải hoặc clone mã nguồn về máy.
-2. Mở Terminal và chuyển tới thư mục dự án.
-3. Kiểm tra Python 3:
-
-```bash
-python3 --version
-```
-
-Nếu chưa có, cài Python 3 bằng trình quản lý gói của bản phân phối Linux đang sử dụng.
-
-## 7. Cấu hình và tùy chỉnh
-
-Dự án hiện không có tệp cấu hình môi trường hoặc biến môi trường cần thiết.
-
-- Chỉnh nội dung, tiêu đề trang, mô tả, thông tin cá nhân và các liên kết trong `index.html`.
-- Thay ảnh `assets/img/avatar.jpg` bằng ảnh của bạn; giữ nguyên tên và đường dẫn, hoặc cập nhật thuộc tính `src` trong `index.html`.
-- Chỉnh màu sắc, kiểu chữ và bố cục trong `assets/css/styles.css`.
-- Thay email mẫu `an.nguyen@example.com` cùng các liên kết GitHub/LinkedIn dạng mẫu bằng thông tin thật trước khi phát hành.
-- Các liên kết dự án hiện là nội dung minh họa; cập nhật `href` của từng liên kết khi có trang dự án thực tế.
-
-## 8. Chạy thử
-
-### Windows (PowerShell)
-
-Chạy tại thư mục dự án:
+### Windows PowerShell
 
 ```powershell
 py -m http.server 8000
 ```
 
-Nếu dùng lệnh `python` thay cho `py`:
-
-```powershell
-python -m http.server 8000
-```
-
-Mở [http://localhost:8000](http://localhost:8000) trên trình duyệt. Dừng máy chủ bằng `Ctrl+C`.
-
-### macOS và Linux
-
-Chạy tại thư mục dự án:
+### macOS/Linux
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Mở [http://localhost:8000](http://localhost:8000) trên trình duyệt. Dừng máy chủ bằng `Ctrl+C`.
+Mở [http://localhost:8000](http://localhost:8000), dừng máy chủ bằng `Ctrl+C`.
 
-### Mở trực tiếp
+## Triển khai GitHub Pages
 
-Có thể mở `index.html` trực tiếp bằng trình duyệt. Dùng máy chủ HTTP cục bộ được khuyến nghị để kiểm tra website trong môi trường gần với lúc triển khai hơn.
+Workflow tại `.github/workflows/pages.yml` triển khai nội dung từ nhánh `main` lên GitHub Pages khi được đưa vào repository. Để hoàn tất:
 
-## 9. Chạy bằng Docker
+1. Đẩy mã nguồn lên nhánh `main` của repository [pthuyy711/CV](https://github.com/pthuyy711/CV).
+2. Trong **Settings → Pages**, đặt **Source** là **GitHub Actions** nếu repository chưa cấu hình nguồn này.
+3. Chờ workflow **Deploy to GitHub Pages** chạy thành công.
+4. Mở [https://pthuyy711.github.io/CV/](https://pthuyy711.github.io/CV/) và kiểm tra tên, email, GitHub, màu sắc, ảnh và các breakpoint.
 
-Không cần tạo Dockerfile: lệnh dưới đây dùng Nginx image có sẵn và mount thư mục dự án ở chế độ chỉ đọc.
+## Tùy chỉnh
 
-Yêu cầu: cài và khởi động Docker Desktop (Windows/macOS) hoặc Docker Engine (Linux).
+- Nội dung, metadata và liên kết: `index.html`.
+- Màu sắc, typography, breakpoint và bố cục: `assets/css/styles.css`.
+- Ảnh đại diện: thay `assets/img/avatar.jpg` bằng ảnh có quyền sử dụng.
+- Các nút “Xem chi tiết” trong dự án hiện là liên kết `#`; cần thay bằng URL dự án thật trước khi phát hành.
+- Email và GitHub trong trang là thông tin liên hệ do chủ sở hữu cung cấp. Liên kết GitHub hiện trỏ tới repository CV.
 
-### Windows (PowerShell)
+## Tài liệu bàn giao
 
-Chạy trong thư mục dự án:
+- [Phân tích yêu cầu, wireframe và quyết định thiết kế](./docs/DESIGN_REPORT.md)
+- [Báo cáo kiểm thử và các giới hạn đã xác nhận](./docs/test_report.md)
+- [Chỉ mục minh chứng và cách tái lập](./docs/EVIDENCE_INDEX.md)
+- [Kịch bản demo 7 phút và câu hỏi phản biện](./docs/DEMO_SCRIPT.md)
+- [Nhật ký sử dụng AI](./AI_LOG.md)
+- [Release notes](./CHANGELOG.md)
+- [Báo cáo Word](./BAOCAO-A2.1.docx)
 
-```powershell
-docker run --rm -d --name cv-portfolio -p 8080:80 -v "${PWD}:/usr/share/nginx/html:ro" nginx:alpine
-```
+## Giới hạn đã biết
 
-Mở [http://localhost:8080](http://localhost:8080). Dừng container bằng:
-
-```powershell
-docker stop cv-portfolio
-```
-
-### macOS và Linux
-
-Chạy trong thư mục dự án:
-
-```bash
-docker run --rm -d --name cv-portfolio -p 8080:80 -v "$PWD:/usr/share/nginx/html:ro" nginx:alpine
-```
-
-Mở [http://localhost:8080](http://localhost:8080). Dừng container bằng:
-
-```bash
-docker stop cv-portfolio
-```
-
-Nếu cổng `8080` đang được sử dụng, đổi phần `8080:80` thành một cổng trống khác, ví dụ `8081:80`, rồi mở cổng đó trên trình duyệt.
-
-## 10. Thông tin liên hệ
-
-Thông tin đang hiển thị trong trang là dữ liệu minh họa:
-
-- Tên: Nguyễn Văn An
-- Email: an.nguyen@example.com
-- GitHub: github.com/nguyenvanan
-- LinkedIn: linkedin.com/in/nguyenvanan
-
-Hãy cập nhật thông tin trong `index.html` trước khi sử dụng hoặc phát hành website. Các liên kết GitHub và LinkedIn hiện là liên kết mẫu.
+- Thẻ dự án là nội dung minh họa; các URL chi tiết chưa được cung cấp.
+- Chưa có kết quả Lighthouse, validator HTML/CSS, kiểm thử đa trình duyệt thực tế hoặc screencast đính kèm.
+- Kiểm tra hiện tại xác nhận cấu trúc và layout ở Chromium; không thay thế đánh giá WCAG đầy đủ hay kiểm thử trên thiết bị thật.
+- Sau mỗi lần cập nhật nhánh `main`, xác minh workflow triển khai và trang công khai.
